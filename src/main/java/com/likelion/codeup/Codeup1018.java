@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Codeup1018 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] strings = sc.next().split(".");
-        System.out.println(strings.length);
-        System.out.printf("%s.%02s.%02s", strings[0], strings[1], strings[2]);
+        String[] strings = sc.next().split(":");
+        int h = Integer.parseInt(strings[0]);
+        int m = Integer.parseInt(strings[1]);
+        System.out.println(h + ":" + m);
     }
 }
