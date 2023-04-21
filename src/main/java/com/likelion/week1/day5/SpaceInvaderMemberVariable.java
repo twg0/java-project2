@@ -5,12 +5,10 @@ public class SpaceInvaderMemberVariable {
     int location;
     public void moveLeft() {
         location = location - 1;
-        System.out.printf("moveLeft: %d\n", location);
     }
 
     public void moveRight() {
         location = location + 1;
-        System.out.printf("moveRight: %d\n", location);
     }
 
     public static void main(String[] args) {
@@ -22,5 +20,9 @@ public class SpaceInvaderMemberVariable {
         sp.moveRight();
         sp.moveRight();
         sp.moveRight();
+
+        System.out.println("최종 위치 = " + sp.location);
+        sp.moveRight();
+        System.out.println("최종 위치 = " + sp.location);
     }
 }
