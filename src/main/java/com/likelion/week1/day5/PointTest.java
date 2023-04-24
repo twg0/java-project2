@@ -21,4 +21,10 @@ public class PointTest {
         System.out.printf("x와 y는 동일한가? %s\n", p1.isSameXy());
 
     }
+
+    static double getDistance(Point p1, Point p2) {
+        double xDist = Math.pow(p1.x - p2.x, 2);
+        double yDist = Math.pow(p1.x - p2.x, 2);
+        return Math.sqrt(xDist + yDist);
+    }
 }
