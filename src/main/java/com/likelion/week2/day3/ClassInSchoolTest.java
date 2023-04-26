@@ -8,7 +8,8 @@ public class ClassInSchoolTest {
         classInSchool.teacher.name = "김미미";
         classInSchool.teacher.age = 58;
 
-        classInSchool.teacher.student = new Student("킴", "03000000000", 14);
+        classInSchool.teacher.students = new Student[20];
+        classInSchool.teacher.students[0] = new Student("킴", "01000000000", 14);
 
 
     }
