@@ -5,6 +5,11 @@ public class ClassInSchoolTest {
         ClassInSchool classInSchool = new ClassInSchool();
         // classInSchool.teacher.student = new Student();
         classInSchool.teacher = new Teacher();
-        classInSchool.teacher.student = new Student();
+        classInSchool.teacher.name = "김미미";
+        classInSchool.teacher.age = 58;
+
+        classInSchool.teacher.student = new Student("킴", "03000000000", 14);
+
+
     }
 }
