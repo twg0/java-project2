@@ -4,6 +4,15 @@ package com.likelion.codeup;
 import java.util.Scanner;
 
 public class Codeup1099 {
+    static void printArr(int[][] arr) {
+        for(int i = 0;i < 10;i++)
+        {
+            for (int j = 0; j < 10; j++) {
+                System.out.printf("%d ", arr[i][j]);
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int[][] map = new int[10][10];
@@ -19,6 +28,8 @@ public class Codeup1099 {
         int antY = 1;
         if(map[1][1] == 2) {
             map[1][1] = 9;
+            printArr(map);
+            return;
         }
         map[1][1] = 9;
         while(true) {
@@ -37,12 +48,6 @@ public class Codeup1099 {
             if(flag) break;
         }
 
-        for(int i = 0;i < 10;i++)
-        {
-            for (int j = 0; j < 10; j++) {
-                System.out.printf("%d ", map[i][j]);
-            }
-            System.out.println();
-        }
+        printArr(map);
     }
 }
