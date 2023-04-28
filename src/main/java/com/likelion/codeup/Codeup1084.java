@@ -18,13 +18,12 @@ public class Codeup1084 {
         int cnt = numR * numG * numB;
         for (int i = 0; i < numR; i++) {
             for (int j = 0; j < numG; j++) {
+                String str = "";
                 for (int k = 0; k < numB; k++) {
-                    String str = "";
-                    str = i +" " + j + " " + k + "\n";
-
-                    bw.write(str);
-                    bw.flush();
+                    str += i +" " + j + " " + k + "\n";
                 }
+                bw.write(str);
+                bw.flush();
             }
         }
         System.out.println(cnt);
