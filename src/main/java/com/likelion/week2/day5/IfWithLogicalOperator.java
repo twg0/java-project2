@@ -13,6 +13,5 @@ public class IfWithLogicalOperator {
         if(!(x > 0)) {
             System.out.println("x는 음수 또는 0입니다.");
         }
-
     }
 }
