@@ -1,11 +1,17 @@
 package com.likelion.week3.day1;
 
+import java.util.Scanner;
+
 public class Multiplicationtable {
     public static void main(String[] args) {
-        for (int j = 2; j <= 4; j++) {
-            for (int i = 1; i <= 9; i++) {
-                System.out.printf("%d * %d = %d\n", j, i, j * i);
-            }
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        inMultiple(num);
+    }
+
+    static void inMultiple(int j) {
+        for (int i = 1; i <= 9; i++) {
+            System.out.printf("%d * %d = %d\n", j, i, j * i);
         }
     }
 }
