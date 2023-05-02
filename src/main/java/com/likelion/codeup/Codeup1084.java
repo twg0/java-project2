@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class Codeup1084 {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
+
         int numR = sc.nextInt();
         int numG = sc.nextInt();
         int numB = sc.nextInt();
-
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int cnt = numR * numG * numB;
