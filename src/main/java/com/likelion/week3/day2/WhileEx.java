@@ -17,5 +17,10 @@ public class WhileEx {
             System.out.printf("%d ", cnt++);
         }
 
+        cnt = 5;
+        while (cnt > 0){
+            System.out.printf("%d\n", cnt--);
+        }
+
     }
 }
