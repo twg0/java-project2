@@ -31,6 +31,7 @@ public class Codeup1099 {
             printArr(map);
             return;
         }
+
         map[1][1] = 9;
         while(true) {
             boolean flag = false;
