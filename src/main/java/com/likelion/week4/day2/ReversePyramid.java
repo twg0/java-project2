@@ -1,4 +1,4 @@
-package com.likelion.week4.day1;
+package com.likelion.week4.day2;
 
 public class ReversePyramid implements MakeALine{
     // 메소드 분리
