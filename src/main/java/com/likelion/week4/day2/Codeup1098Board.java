@@ -7,6 +7,14 @@ public class Codeup1098Board {
     int row;
     int col;
 
+    protected Codeup1098Board () {}
+
+    public Codeup1098Board(int row, int col) {
+        this.row = row;
+        this.col = col;
+        this.map = new int[row][col];
+    }
+
     public void setMap(Codeup1098Stick stick) {
         if(stick.getDir() == 0) { // 가로
             for (int i = 0; i < stick.getLength(); i++) {
@@ -17,12 +25,6 @@ public class Codeup1098Board {
                 map[stick.getX() + i][stick.getY()] = 1;
             }
         }
-    }
-
-    public Codeup1098Board(int row, int col) {
-        this.row = row;
-        this.col = col;
-        this.map = new int[row][col];
     }
 
     public void printMap() {

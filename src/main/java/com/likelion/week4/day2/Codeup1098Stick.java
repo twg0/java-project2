@@ -5,6 +5,8 @@ public class Codeup1098Stick {
     private int dir;
     private int x,y;
 
+    protected  Codeup1098Stick() {};
+
     public Codeup1098Stick(int length, int dir, int x, int y) {
         this.length = length;
         this.dir = dir;
