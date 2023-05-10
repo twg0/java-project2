@@ -2,7 +2,7 @@ package com.likelion.week4.day3;
 
 import java.io.IOException;
 
-public class DiamondMain {
+public class DiamondTest {
     public static void main(String[] args) throws IOException {
         MakeALine makeALine = new DrawDiamond();
         BuildDiamond buildDiamond = new BuildDiamond(makeALine);
