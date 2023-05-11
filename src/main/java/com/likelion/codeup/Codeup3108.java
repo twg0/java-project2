@@ -25,11 +25,11 @@ public class Codeup3108 {
         }
     }
 
-    public void setMountain(int index, int num, String name) {
+    private void setMountain(int index, int num, String name) {
         memory.add(index, new Data(num, name));
     }
 
-    public int getInsultIndex(int number) {
+    private int getInsultIndex(int number) {
         if(memory.isEmpty()) return 0;
         for (int j = 0; j < memory.size(); j++) {
             if(memory.get(j).getNum() == number) {
@@ -42,7 +42,7 @@ public class Codeup3108 {
         return memory.size(); // 가능한가?
     }
 
-    public void removeData(int number) {
+    private void removeData(int number) {
         for (int j = 0; j < memory.size(); j++) {
             if(memory.get(j).getNum() == number) {
                 memory.remove(j);
@@ -54,7 +54,7 @@ public class Codeup3108 {
         System.out.println(memory.get(number).getNum() + " " + memory.get(number).getName());
     }
 
-    public void removeDupleData(Data data) {
+    private void removeDupleData(Data data) {
         for (int i = 0; i < memory.size(); i++) {
             if(memory.get(i).equals(data))
                 memory.remove(data);
