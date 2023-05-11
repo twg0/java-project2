@@ -39,7 +39,7 @@ public class Codeup3108 {
                 return j;
             }
         }
-        return memory.size(); // 가능한가?
+        return memory.size();
     }
 
     private void removeData(int number) {
