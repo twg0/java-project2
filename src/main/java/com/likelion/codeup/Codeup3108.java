@@ -1,9 +1,6 @@
 package com.likelion.codeup;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Codeup3108 {
 
@@ -12,7 +9,6 @@ public class Codeup3108 {
     public Codeup3108(ArrayList<Data> memory) {
         this.memory = memory;
     }
-
 
     public void operation(String code, int number, String name) {
         switch(code) {
@@ -28,6 +24,7 @@ public class Codeup3108 {
                 break;
         }
     }
+
     public void setMountain(int index, int num, String name) {
         memory.add(index, new Data(num, name));
     }
@@ -57,6 +54,13 @@ public class Codeup3108 {
         System.out.println(memory.get(number).getNum() + " " + memory.get(number).getName());
     }
 
+    public void removeDupleData(Data data) {
+        for (int i = 0; i < memory.size(); i++) {
+            if(memory.get(i).equals(data))
+                memory.remove(data);
+        }
+    }
+
     public ArrayList<Data> getMemory() {
         return memory;
     }
@@ -77,5 +81,17 @@ class Data{
     public Data(int num, String name) {
         this.num = num;
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this.hashCode() == obj.hashCode())
+            return true;
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }
