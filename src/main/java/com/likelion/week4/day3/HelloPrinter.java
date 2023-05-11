@@ -1,18 +1,23 @@
 package com.likelion.week4.day3;
 
+import java.io.IOException;
+
 public class HelloPrinter {
-    public void print(String message) {
-        System.out.println(message);
+    Printer2 printer;
+
+    public HelloPrinter(Printer2 printer) {
+        this.printer = printer;
     }
 
-    public void repeatMessage(int n, String message) {
+    public void repeatMessage(int n, String message) throws IOException {
         for (int i = 0; i < n; i++) {
-            print(message);
+            printer.print(message);
         }
     }
 
-    public static void main(String[] args) {
-        HelloPrinter hp = new HelloPrinter();
-        hp.repeatMessage(3, "hello");
+    public static void main(String[] args) throws IOException {
+        HelloPrinter hp = new HelloPrinter(new ConsolePrinter());
+        hp.repeatMessage(5, "Hello");
     }
+
 }
