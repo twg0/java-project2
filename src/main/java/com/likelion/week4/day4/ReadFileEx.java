@@ -22,13 +22,8 @@ public class ReadFileEx {
         ReadFileEx readFileEx2 = new ReadFileEx(new FileWithInputStreamReader(),fileName);
 
         List<String> list = readFileEx.getList();
-        for (String str : list) {
-            System.out.println(str);
-        }
-
-        List<String> list2 = readFileEx2.getList();
-        for (String str : list2) {
-            System.out.println(str);
+        for (int i = 0; i < 9; i++) {
+            System.out.println(list.get(i));
         }
     }
 }
