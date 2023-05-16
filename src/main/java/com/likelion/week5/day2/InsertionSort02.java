@@ -17,17 +17,40 @@ public class InsertionSort02 {
         return arr;
     }
 
+    public char[] sort(char[] arr, boolean isAscending) {
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if((isAscending ? arr[j-1] - arr[j] : arr[j] - arr[j-1]) > 0) { // 오름차순 : 내림차순
+                    char temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                }
+                else break;
+            }
+        }
+        return arr;
+    }
+
     public int[] sort(int[] arr) {
+        return sort(arr, true);
+    }
+
+    public char[] sort(char[] arr) {
         return sort(arr, true);
     }
 
     public static void main(String[] args) {
         int[] arr = {7, 2, 3, 9, 28, 11};
+        char[] chars = {'a', 't', 'v', 'q', 'w', 'b'};
 
         InsertionSort02 is = new InsertionSort02();
         arr = is.sort(arr);
         System.out.println(Arrays.toString(arr));
         arr = is.sort(arr,false);
         System.out.println(Arrays.toString(arr));
+        chars = is.sort(chars);
+        System.out.println(Arrays.toString(chars));
+        chars = is.sort(chars,false);
+        System.out.println(Arrays.toString(chars));
     }
 }
