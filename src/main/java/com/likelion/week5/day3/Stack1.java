@@ -18,12 +18,20 @@ public class Stack1 {
     }
 
     public int pop() {
-        return arr[pointer--];
+        return arr[--pointer];
+    }
+
+    public boolean isEmpty() {
+        return pointer == 0;
     }
 
     public static void main(String[] args) {
         Stack1 stack1 = new Stack1();
         stack1.push(10);
         stack1.push(20);
+        System.out.println(stack1.isEmpty());
+        System.out.println(stack1.pop());
+        System.out.println(stack1.pop());
+        System.out.println(stack1.isEmpty());
     }
 }
