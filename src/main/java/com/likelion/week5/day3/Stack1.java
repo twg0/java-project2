@@ -28,14 +28,20 @@ public class Stack1 {
         return pointer == 0;
     }
 
+    public int peek() {
+        if(isEmpty()) throw new RuntimeException("스택이 비어있습니다.");
+        return arr[pointer-1];
+    }
+
     public static void main(String[] args) {
         Stack1 stack1 = new Stack1();
         stack1.push(10);
         stack1.push(20);
         System.out.println(stack1.isEmpty());
         System.out.println(stack1.pop());
+        System.out.println(stack1.peek());
         System.out.println(stack1.pop());
         System.out.println(stack1.isEmpty());
-        System.out.println(stack1.pop());
+        System.out.println(stack1.peek());
     }
 }
