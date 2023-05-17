@@ -17,6 +17,10 @@ public class Stack1 {
         arr[pointer++] = value;
     }
 
+    public int pop() {
+        return arr[pointer--];
+    }
+
     public static void main(String[] args) {
         Stack1 stack1 = new Stack1();
         stack1.push(10);
