@@ -1,5 +1,7 @@
 package com.likelion.week5.day3;
 
+import java.util.EmptyStackException;
+
 public class Stack1 {
 
     private int[] arr;
@@ -18,6 +20,7 @@ public class Stack1 {
     }
 
     public int pop() {
+        if(isEmpty()) throw new EmptyStackException();
         return arr[--pointer];
     }
 
@@ -33,5 +36,6 @@ public class Stack1 {
         System.out.println(stack1.pop());
         System.out.println(stack1.pop());
         System.out.println(stack1.isEmpty());
+        System.out.println(stack1.pop());
     }
 }
